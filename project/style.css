@@ -1,0 +1,496 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global Styles */
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+body {
+  width: 100%;
+}
+
+/* Header start*/
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: #27643c;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+#navber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navber li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#navber li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  transition: 0 0.3s ease;
+}
+
+#navber li a:hover,
+#navber li a.active {
+  color: #02220e;
+}
+
+#navber li a.active::after,
+#navber li a:hover::after {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background: #02511e;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+#mobile {
+  display: none;
+  align-items: center;
+}
+
+#close {
+  display: none;
+}
+
+/* Home page*/
+
+#hero {
+  height: 90vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 25% right 0;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+#infohero {
+  margin-top: 200px;
+  margin-right: 100px;
+  width: 500px;
+  height: 500px;
+}
+#hero h4 {
+  padding-bottom: 15px;
+}
+#hero h1 {
+  color: #0c7c42;
+}
+#hero button {
+  background-image: url("img/button.png");
+  background-color: transparent;
+  color: #177a47;
+  border: 0;
+  padding: 14px 88px 14px 65px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+#hero img {
+  margin-top: 100px;
+  margin-left: 100px;
+  width: 400px;
+  height: 400px;
+}
+
+/* 
+/* start Media Quary*/
+/* @media screen and (max-width:400px) {
+  #navber {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    height: 50vh;
+    width: 200px;
+    background-color: #d2f9e7;
+    box-shadow: 0 40px 60px rgba(6, 43, 21, 0.1);
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+  }
+  #navber li a {
+    color: #fff;
+  }
+
+  #navber.active{
+  right: 0px;
+  }
+
+  #navber li {
+    margin-bottom: 25px;
+  }
+
+
+  #mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  #mobile i{
+    color: #fff;
+    font-size: 24px;
+    padding: 20px;
+  }
+
+  #close{
+    display: initial;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 24px;
+  }
+  #lg-bag{
+    display: none;
+  }
+
+  #hero {
+    height: 100vh;
+    padding: 0 80px;
+    background-position: top 30% right 30%;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  #hero h4 {
+    padding-bottom: 15px;
+  }
+
+  #hero h1 {
+    color: #0c7c42;
+  }
+
+  #hero button {
+    background-image: url("img/button.png");
+    background-color: transparent;
+    color: #177a47;
+    border: 0;
+    padding: 14px 88px 14px 65px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 15px;
+  }
+
+  #hero img {
+    display: none;
+    }
+}
+
+@media screen and (min-width:401px) and (max-width:650px) {
+  #header{
+    width: 100%;
+  }
+  #navber {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: #d2f9e7;
+    box-shadow: 0 40px 60px rgba(6, 43, 21, 0.1);
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+  }
+  #navber li a {
+    color: #fff;
+  }
+
+  #navber.active{
+  right: 0px;
+  }
+
+  #navber li {
+    margin-bottom: 25px;
+  }
+
+
+  #mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  #mobile i{
+    color: #fff;
+    font-size: 24px;
+    padding: 20px;
+  }
+
+  #close{
+    display: initial;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 24px;
+  }
+  #lg-bag{
+    display: none;
+  }
+
+  #hero {
+    height: 115vh;
+    background-position: top 30% right 30%;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  #infohero{
+    margin-top: 100px;
+    margin-right: -70px;
+    margin-left: 100px;
+  }
+
+  #hero h4 {
+    font-size: 20px;
+  line-height: 30px;
+  }
+
+  #hero h1 {
+    color: #0c7c42;
+    font-size: 40px;
+  line-height: 60px;
+  }
+
+  #hero button {
+    background-image: url("img/button.png");
+    background-color: transparent;
+    color: #177a47;
+    border: 0;
+    padding: 14px 88px 14px 65px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 15px;
+  }
+
+  #hero img {
+    margin-right: 100px;
+    width: 200px;
+    height: 200px;
+    }
+} */
+@media (max-width: 799px) {
+  .section-p1{
+    padding: 40px 40px;}
+  #navber {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: #e3e6f3;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+  }
+  #navber.active {
+    right: 0px;
+  }
+
+  #navber li {
+    margin-bottom: 25px;
+  }
+
+  #mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  #mobile i {
+    color: #1a1a1a;
+    font-size: 24px;
+    padding: 20px;
+  }
+
+  #close {
+    display: initial;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #222;
+    font-size: 24px;
+  }
+  #lg-bag {
+    display: none;
+  }
+
+  #hero {
+    height: 70vh;
+    padding: 0 80px;
+    background-position: top 30% right 30%;
+  }
+}
+
+/* end home page  */
+/* ***************************************************** */
+
+/* shop page */
+#page-header {
+  background: url("img/img/banershop.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 90vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 14px;
+}
+#page-header h2,
+#page-header p {
+  color: #fff;
+}
+
+/* end landing section */
+
+/* single product */
+#prodetails {
+  display: flex;
+  margin-top: 20px;
+}
+
+#prodetails .single-pro-image {
+  width: 25%;
+  margin-right: 100px;
+}
+
+.small-img-group {
+  display: flex;
+  justify-content: space-between;
+}
+.small-img-col {
+  flex-basis: 20%;
+  cursor: pointer;
+}
+
+#prodetails .single-pro-details {
+  width: 50%;
+  padding-top: 30px;
+}
+
+#prodetails .single-pro-details h4 {
+  padding: 40px 0 20px 0;
+}
+
+#prodetails .single-pro-details h2 {
+  font-size: 26px;
+}
+
+#prodetails .single-pro-details select {
+  display: block;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+#prodetails .single-pro-details input {
+  width: 50px;
+  height: 47px;
+  padding-left: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+#prodetails .single-pro-details input:focus {
+  outline: none;
+}
+
+#prodetails .single-pro-details button {
+  background-color: #27643c;
+  color: #fff;
+  padding: 15px;
+}
+#prodetails .single-pro-details span {
+  line-height: 25px;
+}
+@media (max-width: 799px) {
+  /* Single product*/
+  #prodetails {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #prodetails .single-pro-image {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  #prodetails .single-pro-details {
+    width: 100%;
+  }
+}

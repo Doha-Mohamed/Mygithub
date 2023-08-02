@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page</title>
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="img/img/favicon.png" type="image/x-icon" />
+
+    <!--=============== ICONS ===============-->
+    <link rel="stylesheet"href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!--==================== HEADER ====================-->
+    <section id="header">
+      <!--======== NAVBER ==========-->
+      <a href="#"><img src="img/img/favicon.png" alt="" class="logo" /></a>
+      <div>
+        <ul id="navber">
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="cart.html">Contact</a></li>
+          <li>
+            <a id="lg-bag" href="cart.html"
+              ><i class="far fa-shopping-bag"></i
+            ></a>
+          </li>
+          <a href="#" id="close"><i class="far fa-times"></i></a>
+        </ul>
+      </div>
+      <div id="mobile">
+        <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+        <i id="bar" class="fas fa-outdent"></i>
+        <!-- ================== Main Section==================== -->
+        <main class="product py-4">
+          <div class="container">
+            <section class="product_gallery">
+              <img src="" class="prduct_gallery-img" />
+            </section>
+            <section class="description"></section>
+          </div>
+        </main>
+        <section class="realated_product feature py-4">
+          <div class="container">
+            <div class="row">
+              <div class="feature_content">
+                <h2 class="secion-title"></h2>
+                <div class="row"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+    <!-- ================= Ptoduct Section ============== -->
+    <section id="prodetails" class="section-p1">
+      <div class="single-pro-image">
+        <img src="img/img/product1.png" width="100%" id="MainImg" alt="" />
+        <div class="small-img-group">
+          <div class="small-img-col">
+            <img
+              src="img/img/product1.png"
+              width="100%"
+              class="small-img"
+              alt=""
+            />
+          </div>
+          <div class="small-img-col">
+            <img
+              src="img/img/product2.png"
+              width="100%"
+              class="small-img"
+              alt=""
+            />
+          </div>
+          <div class="small-img-col">
+            <img
+              src="img/img/product3.png"
+              width="100%"
+              class="small-img"
+              alt=""
+            />
+          </div>
+          <div class="small-img-col">
+            <img
+              src="img/img/product4.png"
+              width="100%"
+              class="small-img"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="single-pro-details">
+        <h6>Plant</h6>
+        <h4>Aloe Vera Plant</h4>
+        <h2>$139.00</h2>
+        <select>
+          <option>small size</option>
+          <option>medium size</option>
+          <option>big size</option>
+        </select>
+        <input type="number" value="1" />
+        <button class="normal">Add to Cart</button>
+        <h4>Product Details</h4>
+        <span
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, aut
+          fugit suscipit ab nulla omnis enim eos et soluta alias veritatis,
+          totam nihil eveniet ex quasi reprehenderit vel? Accusantium,
+          commodi?</span
+        >
+      </div>
+    </section>
+
+    <script>
+      // script for image change on click
+      var MainImg = document.getElementById("MainImg");
+      var smalling = document.getElementsByClassName("small-img");
+
+      smalling[0].onclick = function () {
+        MainImg.src = smalling[0].src;
+      };
+
+      smalling[1].onclick = function () {
+        MainImg.src = smalling[1].src;
+      };
+
+      smalling[2].onclick = function () {
+        MainImg.src = smalling[2].src;
+      };
+
+      smalling[3].onclick = function () {
+        MainImg.src = smalling[3].src;
+      };
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
