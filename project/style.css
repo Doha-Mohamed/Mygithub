@@ -54,6 +54,7 @@ body {
 
 /* Header start*/
 #header {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -61,7 +62,7 @@ body {
   background: #27643c;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
   z-index: 999;
-  position: sticky;
+  position:fixed;
   top: 0;
   left: 0;
 }
@@ -114,21 +115,20 @@ body {
 /* Home page*/
 
 #hero {
-  height: 90vh;
+  height: 100vh;
   width: 100%;
   background-size: cover;
   background-position: top 25% right 0;
-  padding: 0 80px;
+  padding: 0 100px;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
+  align-content: center;
   justify-content: center;
 }
 #infohero {
-  margin-top: 200px;
-  margin-right: 100px;
-  width: 500px;
-  height: 500px;
+  align-items: center;
+ padding-top: 100px;
 }
 #hero h4 {
   padding-bottom: 15px;
@@ -150,19 +150,23 @@ body {
 
 #hero img {
   margin-top: 100px;
-  margin-left: 100px;
+  margin-left: 50px;
   width: 400px;
   height: 400px;
 }
 
-/* 
+
 /* start Media Quary*/
-/* @media screen and (max-width:400px) {
+ @media screen and (max-width:400px) {
+  #header{
+    width: 100%;
+  }
   #navber {
-    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: center;
+    justify-content:center;
     position: fixed;
     top: 0;
     right: -200px;
@@ -222,9 +226,11 @@ body {
 
   #hero h4 {
     padding-bottom: 15px;
+    font-size: 20px;
   }
 
   #hero h1 {
+    font-size: 30px;
     color: #0c7c42;
   }
 
@@ -240,12 +246,20 @@ body {
     font-size: 15px;
   }
 
+  #infohero {
+    font-size: 20px;
+    margin-top: -300px;
+    margin-right: 100px;
+    width: 300px;
+    height: 200px;
+  }
+
   #hero img {
     display: none;
     }
 }
 
-@media screen and (min-width:401px) and (max-width:650px) {
+@media screen and (min-width:401px) and (max-width:700px) {
   #header{
     width: 100%;
   }
@@ -301,17 +315,16 @@ body {
 
   #hero {
     height: 115vh;
-    background-position: top 30% right 30%;
+    background-position: top 20% right 20%;
     background-size: cover;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
   }
 
   #infohero{
     margin-top: 100px;
-    margin-right: -70px;
     margin-left: 100px;
   }
 
@@ -343,8 +356,11 @@ body {
     width: 200px;
     height: 200px;
     }
-} */
-@media (max-width: 799px) {
+} 
+/* @media (min-width: 651px) {
+  #header{
+    width: 100%;
+  }
   .section-p1{
     padding: 40px 40px;}
   #navber {
@@ -397,7 +413,24 @@ body {
     padding: 0 80px;
     background-position: top 30% right 30%;
   }
-}
+
+  #hero h4 {
+    padding-bottom: 15px;
+    font-size: 20px;
+  }
+
+  #hero h1 {
+    font-size: 30px;
+    color: #0c7c42;
+  }
+
+  #hero img{
+    margin-top: 100px;
+    margin-left: 100px;
+    width: 250px;
+    height: 300px;
+  }
+} */
 
 /* end home page  */
 /* ***************************************************** */
